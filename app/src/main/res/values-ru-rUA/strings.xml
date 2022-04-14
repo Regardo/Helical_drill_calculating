@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Расчет сверла</string>
+    <string name="action_reset">Сброс</string>
+    <string name="action_about">О программе</string>
+    <string name="calculate">Расчитать</string>
+    <string name="back">Назад</string>
+    <string name="initial_data">Исходные данные:</string>
+    <string name="hole_diameter">Диаметр отверстия</string>
+    <string name="finishing">Окончательно</string>
+    <string name="workpiece_material">Материал заготовки:</string>
+    <string name="machine">Станок</string>
+    <string name="tolerance">Допуск</string>
+    <string name="millimeters">мм</string>
+    <string name="dataInput">Расчет сверла: Ввод данных</string>
+    <string name="calculationResult">Результат расчета</string>
+    <string-array name="workpiece_material_array">
+        <item>Сталь HB<![CDATA[<255]]></item>
+        <item>Сталь HRC 38..43</item>
+        <item>Чугун серый HB<![CDATA[<196]]></item>
+        <item>Чугун HB 200…290</item>
+        <item>Чугун HB 290…400</item>
+        <item>Чугун ковкий</item>
+        <item>Нержавеющая и жаропрочная сталь и сплавы</item>
+        <item>Медь</item>
+        <item>Латунь свинцовая</item>
+        <item>Латунь прочая</item>
+        <item>Алюминиевые сплав</item>
+        <item>Алюминий листовой</item>
+        <item>Титановые сплавы</item>
+    </string-array>
+    <string name="share">Поделится</string>
+    <string name="diameterError">Значение обрабатываемого отверстия выходит за пределы допустимого.</string>
+    <string name="r1_weldpos">"1. Положение сварного шва: "</string>
+    <string name="r2_summary">"2. Геометрические параметры сверла:
+        "</string>
+    <string name="r3_isNotFinish">"3. Т.к. отверстие обрабатывается предварительно, диаметр отверстия равен диаметру сверла:
+        dp = "</string>
+    <string name="r3_finish">"3. Т.к. отверстие обрабатывается окончательно, то расчетный диаметр:
+        dр = "</string>
+    <string name="r3_razbivka">"Расчетный диаметр анализируем с точки зрения запаса на разбивку:
+        "</string>
+    <string name="true_text">Верно</string>
+    <string name="r3_drillWear">"и износ сверла:
+        "</string>
+    <string name="r3_roundDp">"Условия выполняются, поэтому округляем dp кратно "</string>
+    <string name="r4_angle_a_w">4. Задний угол и угол наклона винтовой канавки зависят от диаметра сверла:</string>
+    <string name="r5_ribbon">"5. Ленточка при обработке материала "</string>
+    <string name="r6_ribbon_h">"6. Высота ленточки: "</string>
+    <string name="r7_back">"7. Диаметр спинки сверла:
+        q = "</string>
+    <string name="r8_groove">"8. Центральный угол канавки при обработке материала "</string>
+    <string name="r9_penW">"9. Ширина пера:
+        B = "</string>
+    <string name="r10_result">"10. Толщина сердцевины канавки для материала ''%3$s''
+        k = %1$s мм
+Для повышения прочности и жёсткости сверла его сердцевина утолщается к хвостовику.
+        k2 = %2$s мм"</string>
+    <string name="r11_output">"11. Расчет длинны сверла
+        "</string>
+    <string name="r11.1_lengthDrill">"11.1 Длинна отверстия:
+        Lo = %1$s мм"</string>
+    <string name="r11.2_">"11.2 Запас выхода стружки из отверстия: %1$s мм"</string>
+    <string name="r11.3_result">"11.3 Длину кондукторной втулки для d = %1$s выбираем <![CDATA[<]]> 1.5d = %2$s:
+        Lкон = %3$s мм "</string>
+    <string name="r11.4_result">"11.4 Длина стачивания:
+        Lст = %1$s мм"</string>
+    <string name="r11.5_result">"11.5 Длина стружечной канавки неполной глубины:
+        Lк = %1$s мм"</string>
+    <string name="r11.6">"11.6 Длина шейки
+        Lш = %1$s мм"</string>
+    <string name="r11.7_result">"11.7 Примем конус Морзе %1$s по ГОСТ 25557-82.
+        Длинна хвостовика:
+        Lхв = %2$s = %3$s мм (по ГОСТ 6636-69;Ra 20)"</string>
+    <string name="r11.8_summaryLength">"11.8 Длинна сверла:
+        L = %1$s мм"</string>
+    <string name="r12_firstPart">"12. Производим проверку сверла на прочность.
+Используем %1$s
+Согласно паспорту станка:
+    	Крутящий момент: Mкр = %2$s Н*м
+    	Осевая сила: Po = %3$s Н
+Определяем необходимые коэффициенты:
+        m = %4$s
+        n' = %5$s
+        F = %6$s
+        tk = 1650 МПа
+        К = 0.25
+        n = 1.67
+        придел текучести = 3 ГПа
+        E = 225 ГПа
+        Imin = %7$s
+        lв = %8$s мм
+"</string>
+    <string name="r12_secondPart">"Чтобы сверло надежно противостояло силам резания, оно должно иметь запас прочности, превышающий действующие нагрузки. Необходимо выдерживать следующие соотношения:
+    %1$s  <![CDATA[<=]]> %2$s
+    %3$s <![CDATA[<=]]> %4$s
+    %5$s <![CDATA[<=]]> %6$s
+"</string>
+    <string name="r12_firsConditionFalse">Не выполняется первое условие.</string>
+    <string name="r12_secondConditionFalse">Не выполняется второе условие.</string>
+    <string name="r12_thirdConditionFalse">Не выполняется третье условие.</string>
+    <string name="r12_allConditionTrue">Все условия выполняются.</string>
+    <string-array name="machineFullName">
+        <item>вертикально-сверлильный станок 2Н135.</item>
+        <item>универсальный облегченно-упращенный вертикально-сверлильный станок 2Н125Л.</item>
+        <item>вертикально-сверлильный станок 2Н135Л.</item>
+        <item>станок радиально-сверлильный переносной 2А587.</item>
+        <item>станок радиально-сверлильный переносной 2К52–1.</item>
+        <item>станок вертикально-сверлильный 2С132.</item>
+        <item>станок радиально-сверлильный 2А554.</item>
+        <item>станок вертикально-сверлильный 2Н118.</item>
+        <item>станок радиально-сверлильный 2А532.</item>
+    </string-array>
+
+    <string name="initialValueForm">"Исходные данные:
+Диаметр отверстия, обрабатываемого %2$s, %1$s мм.
+Материал обрабатываемой заготовки: «%3$s».
+Обработка ведется на станке «%4$s».
+Допуск обрабатываемого отверстия = %5$s мм. Верхнее отклонение (ES) = %6$s мм. Нижнее отклонение (EI) = %7$s мм
+
+"</string>
+    <string-array name="finishOrSemifinish">
+        <item>предварительно</item>
+        <item>окончательно</item>
+    </string-array>
+    <string name="aboutTitle">О программе</string>
+    <string name="aboutMessage">"Программа для расчета сверла с винтовыми канавками.
+Создал: ст. гр. ТОМ-12 Бабичев И.Л.
+Под руководством: Денисовой Н.А.
+ДонГТУ, Кафедра ТОМП.
+г. Алчевск, 2015
+Портирование на Android:
+г. Харьков, 2022"</string>
+    <string name="aboutClose">Закрыть</string>
+
+
+</resources>

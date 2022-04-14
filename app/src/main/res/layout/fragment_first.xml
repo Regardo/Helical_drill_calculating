@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FirstFragment"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background2"  />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                tools:context=".FirstFragment">
+
+
+                <TextView
+                    android:id="@+id/textview_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/initial_data"
+                    android:textColor="@color/text"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText">
+
+                    <RelativeLayout
+                        android:id="@+id/diamFirstLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:focusableInTouchMode="true">
+
+                        <TextView
+                            android:id="@+id/diamSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="4dp"
+                            android:text="@string/hole_diameter"
+                            android:textColor="@color/text"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/holeDiameter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/diamSi"
+                            android:hint="@string/hole_diameter_default"
+                            android:inputType="numberDecimal"
+                            android:minWidth="80dp"
+                            android:textColor="@color/text"
+                            android:textSize="20sp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/mm_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_toEndOf="@+id/holeDiameter"
+                            android:text="@string/millimeters"
+                            android:textColor="@color/text"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <CheckBox
+                        android:id="@+id/finishingCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/diamFirstLine"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="5dp"
+                        android:buttonTint="@color/white"
+                        android:checked="true"
+                        android:text="@string/finishing"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/workpiece_material"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/workpieceSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:entries="@array/workpiece_material_array"
+                        android:minHeight="50dp"
+
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="5dp"
+                        android:text="@string/machine"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/machineSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+                        android:entries="@array/machine_array"
+                        android:minHeight="50dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textTolerance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:text="@string/tolerance"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTolerance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/textTolerance"
+                        android:hint="@string/tolerance_default"
+                        android:inputType="numberDecimal"
+                        android:minWidth="100dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/editTolerance"
+                        android:text="@string/millimeters"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textTolerance_es"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/tolerance_es"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTolerance_es"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/textTolerance_es"
+                        android:hint="@string/tolerance_es_default"
+                        android:inputType="numberDecimal"
+                        android:minWidth="100dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/editTolerance_es"
+                        android:text="@string/millimeters"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/backgroundText"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textTolerance_ei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:text="@string/tolerance_ei"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTolerance_ei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/textTolerance_ei"
+                        android:hint="@string/tolerance_ei_default"
+                        android:inputType="numberDecimal"
+                        android:minWidth="100dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/editTolerance_ei"
+                        android:text="@string/millimeters"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/button_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/calculate"
+
+
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

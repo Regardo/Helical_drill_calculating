@@ -1,0 +1,230 @@
+<resources>
+    <string name="app_name">Drill Design</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_about">About</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="dataInput">Drill Design: Data input</string>
+    <string name="calculationResult">Calculation result</string>
+    <string name="calculate">Calculate</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+
+    <string name="initial_data">Initial data:</string>
+    <string name="hole_diameter">Hole diameter</string>
+    <string name="finishing">Finishing</string>
+    <string name="workpiece_material">Workpiece material:</string>
+    <string name="machine">Machine</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="tolerance_es" translatable="false">ES</string>
+    <string name="tolerance_ei" translatable="false">EI</string>
+    <string name="millimeters">mm</string>
+    <string-array name="workpiece_material_array">
+        <item>Steel HB<![CDATA[<255]]></item>
+        <item>Steel HRC 38..43</item>
+        <item>Cast iron gray HB<![CDATA[<196]]></item>
+        <item>Cast iron HB 200…290</item>
+        <item>Cast iron HB 290…400</item>
+        <item>Ductile iron</item>
+        <item>Stainless and heat resistant steels and alloys</item>
+        <item>Copper</item>
+        <item>Lead brass</item>
+        <item>Other brass</item>
+        <item>Aluminum alloys</item>
+        <item>sheet aluminum</item>
+        <item>titanium alloys</item>
+    </string-array>
+    <string-array name="machine_array">
+        <item>2Н135</item>
+        <item>2Н125Л</item>
+        <item>2Н135Л</item>
+        <item>2А587</item>
+        <item>2К52–1</item>
+        <item>2С132</item>
+        <item>2А554</item>
+        <item>2Н118</item>
+        <item>2А532</item>
+    </string-array>
+    <!-- Strings used for default value -->
+    <string name="hole_diameter_default" translatable="false">20</string>
+    <string name="tolerance_default" translatable="false">0.13</string>
+    <string name="tolerance_es_default" translatable="false">0.13</string>
+    <string name="tolerance_ei_default" translatable="false">0</string>
+
+    <string name="test_answer" translatable="false"><![CDATA[1. Положение сварного шва: 29 мм\r\n2. Геометрические параметры сверла 2ф=118 °; wt=30°; at=12°.\r\n3. Т.к. отверстие обрабатывается окончательно, то расчетный диаметр: \r\n    dр = 20.120419 мм\r\nРасчетный диаметр анализируем с точки зрения запаса на разбивку:\r\n    0.120418999999998 >= 0.0206708942783717  Верно.\r\nи износ сверла:\r\n    0.120418999999998 >= 0.0108794180412483  Верно.\r\nУсловия выполняются, поэтому округляем dp кратно 0.1 \r\n    d = 20.1\r\n4. Задний угол и угол наклона винтовой канавки зависят от диаметра сверла:\r\n    a = 12 \r\n    w = 31\r\n5. Ленточка при обработке стали НВ<255 \r\n    f = 1.359\r\n6. Высота ленточки: 0.503 мм\r\n7. Диаметр спинки:\r\n    q = 19.095 мм \r\n8. Центральный угол канавки при обработке стали НВ<255 \r\n    v = 91 °\r\n9. Ширина пера:\r\n
+1. Положение сварного шва: 29 мм\r\n2. Геометрические параметры сверла 2ф=118 °; wt=30°; at=12°.\r\n3. Т.к. отверстие обрабатывается окончательно, то расчетный диаметр: \r\n    dр = 20.120419 мм\r\nРасчетный диаметр анализируем с точки зрения запаса на разбивку:\r\n    0.120418999999998 >= 0.0206708942783717  Верно.\r\nи износ сверла:\r\n    0.120418999999998 >= 0.0108794180412483  Верно.\r\nУсловия выполняются, поэтому округляем dp кратно 0.1 \r\n    d = 20.1\r\n4. Задний угол и угол наклона винтовой канавки зависят от диаметра сверла:\r\n    a = 12 \r\n    w = 31\r\n5. Ленточка при обработке стали НВ<255 \r\n    f = 1.359\r\n6. Высота ленточки: 0.503 мм\r\n7. Диаметр спинки:\r\n    q = 19.095 мм \r\n8. Центральный угол канавки при обработке стали НВ<255 \r\n    v = 91 °\r\n9. Ширина пера:\r\n ]]></string>
+
+    <string name="diameterError">The value of the machined hole is out of range.</string>
+    <string name="r1_weldpos">"1. Weld position: "</string>
+    
+    <string-array name="r2_2f">
+        <item>118</item>
+        <item>150</item>
+        <item>100</item>
+        <item>118</item>
+        <item>150</item>
+        <item>118</item>
+        <item>150</item>
+        <item>130</item>
+        <item>118</item>
+        <item>130</item>
+        <item>130</item>
+        <item>90</item>
+        <item>130</item>
+    </string-array>
+    
+    <string-array name="r2_wt">
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
+        <item>40</item>
+        <item>10</item>
+        <item>40</item>
+        <item>40</item>
+        <item>10</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="r2_at">
+        <item>12</item>
+        <item>8</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>8</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+    </string-array>
+    <string name="r2_summary">"2. Geometric parameters of the drill:
+    "</string>
+
+    <string name="r3_isNotFinish">"3. Because the hole is pre-machined, the hole diameter is equal to the drill diameter:
+        dp = "</string>
+    <string name="r3_finish">"3. Because the hole is finished, then the calculated diameter:
+        dр = "</string>
+    <string name="r3_razbivka">"We analyze the estimated diameter from the point of view of the breakdown margin:
+        "</string>
+    <string name="true_text">True</string>
+    <string name="r3_drillWear">"and drill wear:
+        "</string>
+    <string name="r3_roundDp">The conditions are met, so we round dp to a multiple of </string>
+    <string name="r4_angle_a_w">4. Clearance angle and helix angle depend on the drill diameter:</string>
+    <string name="r5_ribbon">"5. Ribbon when machining "</string>
+    <string name="r6_ribbon_h">6. Ribbon Height: </string>
+    <string name="r7_back">"7. Drill back diameter:
+        q = "</string>
+    <string name="r8_groove">"8. Central angle of the groove when machining "</string>
+    <string name="r9_penW">"9. Pen width of drill:
+        B = "</string>
+    <string name="r10_result">"10. Thickness of core groove for ''%3$s''
+        k = %1$s mm
+To increase the strength and rigidity of the drill, its core thickens towards the shank.
+        k2 = %2$s mm"</string>
+    <string name="r11_output">"11. Calculation of drill length
+        "</string>
+    <string name="r11.1_lengthDrill">"11.1 Hole length:
+        Lo = %1$s mm"</string>
+    <string name="r11.2_">"11.2 Stock of chip exit from the hole: %1$s mm"</string>
+    <string name="r11.3_result">"11.3 The length of the conductor sleeve for d = %1$s is selected <![CDATA[<]]> 1.5d = %2$s:
+        Lcon = %3$s mm"</string>
+    <string name="r11.4_result">"11.4 Length of stitching:
+        Lst = %1$s mm"</string>
+    <string name="r11.5_result">"11.5 Short flute length:
+        L = %1$s mm"</string>
+    <string name="r11.6">"11.6 Neck length
+        Lsh = %1$s mm"</string>
+    <string name="r11.7_result">"11.7 Let's take the Morse taper %1$s according to GOST 25557-82.
+         Shank length:
+         Lхв = %2$s = %3$s mm (according to GOST 6636-69; Ra 20)"</string>
+    <string name="r11.8_summaryLength">"11.8 Drill length:
+         L = %1$s mm"</string>
+    <string name="r12_firstPart">"12. We check the drill for strength.
+We use %1$s
+According to the machine data sheet:
+     Torque: Mcr = %2$s N*m
+     Axial force: Po = %3$s N
+We determine the necessary coefficients:
+         m = %4$s
+         n' = %5$s
+         F = %6$s
+         tk = 1650 MPa
+         K = 0.25
+         n = 1.67
+         yield limit = 3 GPa
+         E = 225 GPa
+         Imin = %7$s
+         lv = %8$s mm
+"</string>
+    <string-array name="machine_torque">
+        <item>400</item>
+        <item>880</item>
+        <item>2500</item>
+        <item>2800</item>
+        <item>90</item>
+        <item>400</item>
+        <item>7100</item>
+        <item>880</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="machine_axial_force">
+        <item>15000</item>
+        <item>560</item>
+        <item>900</item>
+        <item>50000</item>
+        <item>5000</item>
+        <item>15000</item>
+        <item>20000</item>
+        <item>5490</item>
+        <item>8000</item>
+    </string-array>
+    <string-array name="machineFullName">
+        <item>vertical drilling machine 2N135.</item>
+        <item>universal lightweight vertical drilling machine 2N125L.</item>
+        <item>vertical drilling machine 2N135L.</item>
+        <item>radial drilling machine portable 2A587.</item>
+        <item>radial drilling machine portable 2К52–1.</item>
+        <item>vertical drilling machine 2S132.</item>
+        <item>radial drilling machine 2А554.</item>
+        <item>vertical drilling machine 2N118.</item>
+        <item>radial drilling machine 2А532.</item>
+    </string-array>
+    <string name="r12_secondPart">"In order for the drill to reliably withstand cutting forces, it must have a safety margin that exceeds the acting loads. It is necessary to maintain the following ratios:
+     %1$s <![CDATA[<=]]> %2$s
+     %3$s <![CDATA[<=]]> %4$s
+     %5$s <![CDATA[<=]]> %6$s
+"</string>
+    <string name="r12_firsConditionFalse">"The first condition is not met."</string>
+    <string name="r12_secondConditionFalse">"The second condition is not met."</string>
+    <string name="r12_thirdConditionFalse">"The third condition is not met."</string>
+    <string name="r12_allConditionTrue">"All conditions are met."</string>
+    <string name="initialValueForm">"Initial data:
+Hole diameter  %2$s, %1$s mm.
+Workpiece material: "%3$s".
+Processing is carried out on the machine "%4$s".
+Machining hole tolerance = %5$s mm. Upper deviation (ES) = %6$s mm. Lower Deviation (EI) = %7$s mm
+
+"</string>
+    <string-array name="finishOrSemifinish">
+        <item>pre-machined</item>
+        <item>final machined</item>
+    </string-array>
+    <string name="aboutTitle">About</string>
+    <string name="aboutMessage">"Helical fluted drill calculation program.
+Created by: st. gr. TOM-12 Babichev I.L.
+Under the direction of: Denisova N.A.
+DonSTU, Department of technology and organization of machine-building production.
+Alchevsk, 2015
+Porting to Android:
+Kharkiv, 2022"</string>
+    <string name="aboutClose">Close</string>
+
+
+</resources>
